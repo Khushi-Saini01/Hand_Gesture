@@ -28,12 +28,12 @@ st.markdown("Upload a hand gesture image to predict its class!")
 # -----------------------
 # Upload Image Section
 # -----------------------
-uploaded_file = st.file_uploader("📤 Upload Image", type=["jpg", "png", "jpeg"])
+uploaded_file = st.file_uploader(" Upload Image", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
     # Show uploaded image
     image = Image.open(uploaded_file)
-    st.image(image, caption="🖼️ Uploaded Image", use_column_width=True)
+    st.image(image, caption=" Uploaded Image", use_column_width=True)
 
     # Ensure RGB format
     image = image.convert("RGB")
@@ -50,5 +50,5 @@ if uploaded_file is not None:
     confidence = np.max(prediction) * 100
 
     # Display prediction
-    st.success(f"✅ Predicted Gesture Class: **{predicted_class}**")
-    st.info(f"🎯 Confidence: {confidence:.2f}%")
+    st.success(f"Predicted Gesture Class: **{predicted_class}**")
+    st.info(f"Confidence: {confidence:.2f}%")
